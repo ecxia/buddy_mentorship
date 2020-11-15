@@ -135,3 +135,6 @@ dmypy.json
 
 # direnv
 .envrc
+
+# node modules
+node_modules/
