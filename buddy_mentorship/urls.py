@@ -26,9 +26,15 @@ urlpatterns = [
     path("profile/", views.profile, name="your_profile"),
     path("profile/<int:profile_id>", views.profile, name="profile"),
     path("profile_edit/", views.ProfileEdit.as_view(), name="edit_profile"),
-    path("edit_skill/<int:pk>", views.UpdateExperience.as_view(), name="edit_skill",),
     path(
-        "delete_skill/<int:pk>", views.DeleteExperience.as_view(), name="delete_skill",
+        "edit_skill/<int:pk>",
+        views.UpdateExperience.as_view(),
+        name="edit_skill",
+    ),
+    path(
+        "delete_skill/<int:pk>",
+        views.DeleteExperience.as_view(),
+        name="delete_skill",
     ),
     path("skill", views.skill_search, name="skill_search"),
     path("add_skill/<int:exp_type>", views.AddSkill.as_view(), name="add_skill"),
@@ -50,4 +56,6 @@ urlpatterns = [
         TemplateView.as_view(template_name="buddy_mentorship/release_notes.html"),
         name="release_notes",
     ),
+    path("requests/<int:request_id>", views.request_detail, name="request_detail"),
+    path("requests/", views.requests_list, name="requests"),
 ]

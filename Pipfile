@@ -7,6 +7,7 @@ verify_ssl = true
 black = "*"
 pytest = "*"
 pytest-django = "*"
+pytest-cov = "*"
 
 [packages]
 django = "*"
@@ -15,7 +16,6 @@ psycopg2 = "*"
 psycopg2-binary = "*"
 selenium = "*"
 bootstrap4 = "*"
-social-auth-app-django = "*"
 python-dotenv = "*"
 django-config = "*"
 django-heroku = "*"
@@ -23,6 +23,7 @@ gunicorn = "*"
 django-maintenance-mode = "*"
 django-autocomplete-light = "*"
 django-webpack-loader = "*"
+social-auth-app-django = "*"
 
 [requires]
 python_version = "3.7"
